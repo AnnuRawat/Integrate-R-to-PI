@@ -13,7 +13,9 @@ using System.Diagnostics;
 namespace SharedLib
 {
     public class RApplication
+
     {
+
         private REngine engine = null;
         private readonly DateTime unixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
