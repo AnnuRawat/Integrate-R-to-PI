@@ -52,16 +52,16 @@ namespace SampleApp_RDotNet_VS2012
             lbCurrRFunction.Visible = false;
             lbUsingRFunction.Visible = false;
             tsConnected.Text = "Not connected";
-            int Connectedtatus = -1;
+            bool connectedtatus = true;
             if (cbPIServersList.Text == string.Empty)
             {
-                Connectedtatus = MyApp.ConnectToPIServer(cbPIServersList.Text, 1);
+                connectedtatus = MyApp.Connect(null);
             }
             else
             {
-                Connectedtatus = MyApp.ConnectToPIServer(cbPIServersList.Text, 0);
+                connectedtatus = MyApp.Connect(cbPIServersList.Text);
             }
-            if (Connectedtatus == 1)
+            if (connectedtatus == true)
             {
                 tsConnected.Text = "Connected to " + MyApp.GetPIServerName();
                 MyApp.ProgramCurrentStep = 0;
@@ -83,7 +83,7 @@ namespace SampleApp_RDotNet_VS2012
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
             cbPIServersList.Items.Clear();
-            cbPIServersList.Items.AddRange(MyApp.GetPIServersList());
+            cbPIServersList.Items.AddRange(MyApp.GetPIDataArchiveNames());
         }
 
 
@@ -91,7 +91,7 @@ namespace SampleApp_RDotNet_VS2012
         private void bGetData_Click(object sender, EventArgs e)
         {
             int result = -1;
-            if (MyApp.GetNumTags() == 1)
+            if (MyApp.NumTags == 1)
             {
                 tbTag2.Text = String.Empty;
                 tbTag3.Text = String.Empty;
@@ -100,20 +100,19 @@ namespace SampleApp_RDotNet_VS2012
 
             }
 
-            if (MyApp.GetNumTags() == 2)
+            if (MyApp.NumTags == 2)
             {
                 tbTag3.Text = String.Empty;
                 tbTag4.Text = String.Empty;
                 tbTag5.Text = String.Empty;
             }
 
-            if (MyApp.GetNumTags() == 3)
+            if (MyApp.NumTags == 3)
             {
                 tbTag4.Text = String.Empty;
                 tbTag5.Text = String.Empty;
             }
-
-            if (MyApp.GetNumTags() == 4)
+            if (MyApp.NumTags == 4)
             {
                 tbTag5.Text = String.Empty;
             }
@@ -139,7 +138,7 @@ namespace SampleApp_RDotNet_VS2012
                 MyApp.ProgramCurrentStep = 1;
             }
             tsValCount.Text = GenerateStringValuesOnMemory();
-            lbCurrRFunction.Text = MyApp.GetRFunction();
+            lbCurrRFunction.Text = MyApp.RFunction;
             lbCurrRFunction.Visible = true;
             lbUsingRFunction.Visible = true;
             btGraphic.Visible = true;
@@ -151,7 +150,7 @@ namespace SampleApp_RDotNet_VS2012
         {
 
             string text = "No values on memory";
-            int numtags = MyApp.GetNumTags();
+            int numtags = MyApp.NumTags;
             if (numtags == 1)
             {
                 text = Convert.ToString(MyApp.IntCountAFValues(1)) + " values on memory.";
@@ -190,7 +189,7 @@ namespace SampleApp_RDotNet_VS2012
             lbTag4.Visible = false;
             tbTag5.Visible = false;
             lbTag5.Visible = false;
-            MyApp.SetNumTags(1);
+            MyApp.NumTags = 1;
         }
 
         private void tbForTwoTags()
@@ -205,7 +204,7 @@ namespace SampleApp_RDotNet_VS2012
             lbTag4.Visible = false;
             tbTag5.Visible = false;
             lbTag5.Visible = false;
-            MyApp.SetNumTags(2);
+            MyApp.NumTags = 2;
         }
 
         private void tbForThreeTags()
@@ -221,7 +220,7 @@ namespace SampleApp_RDotNet_VS2012
             lbTag4.Visible = false;
             tbTag5.Visible = false;
             lbTag5.Visible = false;
-            MyApp.SetNumTags(3);
+            MyApp.NumTags = 3;
         }
 
         private void tbForFourTags()
@@ -238,7 +237,7 @@ namespace SampleApp_RDotNet_VS2012
             lbTag4.Visible = true;
             tbTag5.Visible = false;
             lbTag5.Visible = false;
-            MyApp.SetNumTags(4);
+            MyApp.NumTags = 4;
         }
 
         private void tbForFiveTags()
@@ -256,7 +255,7 @@ namespace SampleApp_RDotNet_VS2012
             lbTag4.Visible = true;
             tbTag5.Visible = true;
             lbTag5.Visible = true;
-            MyApp.SetNumTags(5);
+            MyApp.NumTags = 5;
         }
 
 
@@ -265,7 +264,7 @@ namespace SampleApp_RDotNet_VS2012
         {
 
             rbnInterp.Checked = true;
-            MyApp.SetMode("Interpolated");
+            MyApp.Mode = "Interpolated";
             lbInterval.Visible = true;
             tbInterval.Visible = true;
 
@@ -275,7 +274,7 @@ namespace SampleApp_RDotNet_VS2012
         {
 
             rbnRecorded.Checked = true;
-            MyApp.SetMode("Recorded");
+            MyApp.Mode = "Recorded";
             lbInterval.Visible = false;
             tbInterval.Visible = false;
         }
@@ -332,25 +331,25 @@ namespace SampleApp_RDotNet_VS2012
 
             if (cbRFunctions.Text == "PI Density Compare")
             {
-                if (MyApp.GetNumTags() == 2)
-                    MyApp.SetRFunction("PI Density Compare for two tags");
-                if (MyApp.GetNumTags() == 3)
-                    MyApp.SetRFunction("PI Density Compare for three tags");
+                if (MyApp.NumTags == 2)
+                    MyApp.RFunction = "PI Density Compare for two tags";
+                if (MyApp.NumTags == 3)
+                    MyApp.RFunction = "PI Density Compare for three tags";
 
 
             }
             else if (cbRFunctions.Text == "PI Multi-Correlation")
             {
-                if (MyApp.GetNumTags() == 3)
-                    MyApp.SetRFunction("PI Multi-Correlation for three tags");
-                if (MyApp.GetNumTags() == 4)
-                    MyApp.SetRFunction("PI Multi-Correlation for four tags");
-                if (MyApp.GetNumTags() == 5)
-                    MyApp.SetRFunction("PI Multi-Correlation for five tags");
+                if (MyApp.NumTags == 3)
+                    MyApp.RFunction = "PI Multi-Correlation for three tags";
+                if (MyApp.NumTags == 4)
+                    MyApp.RFunction = "PI Multi-Correlation for four tags";
+                if (MyApp.NumTags == 5)
+                    MyApp.RFunction = "PI Multi-Correlation for five tags";
             }
             else
             {
-                MyApp.SetRFunction(cbRFunctions.Text);
+                MyApp.RFunction = cbRFunctions.Text;
             }
         }
 
@@ -489,7 +488,7 @@ namespace SampleApp_RDotNet_VS2012
             param2 = cbParam2.Text;
             param3 = cbParam3.Text;
             param4 = cbParam4.Text;
-            if (MyApp.GetRFunction() == "PI Histogram")
+            if (MyApp.RFunction == "PI Histogram")
             {
                 try
                 {
@@ -542,7 +541,7 @@ namespace SampleApp_RDotNet_VS2012
 
 
 
-            if (MyApp.GetRFunction() == "PI Density Plot")
+            if (MyApp.RFunction == "PI Density Plot")
             {
 
                 if ((cbParam1.Text == "Grey") || (cbParam1.Text == "Yellow") || (cbParam1.Text == "Magenta") || (cbParam1.Text == "Blue") || (cbParam1.Text == "Red") || (cbParam1.Text == "Green") || (cbParam1.Text == "Black") || (cbParam1.Text == "White") || (cbParam1.Text == "Pink") || (cbParam1.Text == "Orange") || (cbParam1.Text == "Purple") || (cbParam1.Text == "Brown"))
@@ -592,7 +591,7 @@ namespace SampleApp_RDotNet_VS2012
             }
 
 
-            if (MyApp.GetRFunction() == "PI Box Plot")
+            if (MyApp.RFunction == "PI Box Plot")
             {
                 try
                 {
@@ -652,7 +651,7 @@ namespace SampleApp_RDotNet_VS2012
                     SaveParamStrings();
                     MyApp.ProgramCurrentStep = 3;
                     MyApp.GenerateGhaphic(param1, param2, param3, param4);
-                    if (MyApp.GetRFunction() == "PI Regular Correlation")
+                    if (MyApp.RFunction == "PI Regular Correlation")
                     {
                         MessageBox.Show("Correlation coefficient = " + MyApp.ValueToBeShown);
                     }
@@ -870,8 +869,8 @@ namespace SampleApp_RDotNet_VS2012
             {
                 DataMethod = "PIWS";
             }
-            MyApp.SetDataAccessMethod(DataMethod);
-        
+            MyApp.DataAccessMethod = DataMethod;
+
             MyApp.Inicialize();
 
             if (rbPIAFSDK.Checked)
@@ -889,7 +888,7 @@ namespace SampleApp_RDotNet_VS2012
             }
             tsValCount.Text = "No values on memory";
 
-            
+
             tsConnected.Text = "Not connected";
             gbR.Visible = false;
             gbRFunctionInfo.Visible = false;
@@ -897,8 +896,8 @@ namespace SampleApp_RDotNet_VS2012
             btGraphic.Visible = false;
             lbCurrRFunction.Visible = false;
             lbUsingRFunction.Visible = false;
-            
+
         }
 
-  }
+    }
 }

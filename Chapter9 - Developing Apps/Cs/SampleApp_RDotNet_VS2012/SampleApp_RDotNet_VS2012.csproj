@@ -32,15 +32,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="DynamicInterop, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicInterop.0.7.4\lib\net40\DynamicInterop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="OSIsoft.AFSDK, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6238be57836698e6, processorArchitecture=MSIL" />
-    <Reference Include="RDotNet">
-      <HintPath>..\packages\R.NET.1.5.5\lib\net40\RDotNet.dll</HintPath>
+    <Reference Include="RDotNet, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R.NET.Community.1.6.5\lib\net40\RDotNet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="RDotNet.NativeLibrary">
-      <HintPath>..\packages\R.NET.1.5.5\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
+    <Reference Include="RDotNet.NativeLibrary, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R.NET.Community.1.6.5\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,17 +64,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PIData_PIAFSDK.cs" />
-    <Compile Include="PIData_PIWA.cs" />
-    <Compile Include="PIData_PIWS.cs" />
+    <Compile Include="IPIDeveloperTech.cs" />
+    <Compile Include="PIAFSDK_Wrapper.cs" />
+    <Compile Include="PIValuesList.cs" />
+    <Compile Include="PIWebAPI_Wrapper.cs" />
     <Compile Include="PIValue.cs" />
     <Compile Include="PIValues.cs" />
     <Compile Include="RApplication.cs" />
-    <Compile Include="Service References\PIWSTimeSeriesRef\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="WinForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,43 +101,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\PIWSTimeSeriesRef\PITimeSeries.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PIWSTimeSeriesRef\PITimeSeries1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PIWSTimeSeriesRef\PITimeSeriesService.wsdl" />
-    <None Include="Service References\PIWSTimeSeriesRef\SampleApp_RDotNet_VS2012.PIWSTimeSeriesRef.SignUpResults.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\PIWSTimeSeriesRef\SampleApp_RDotNet_VS2012.PIWSTimeSeriesRef.TimeSeries.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\PIWSTimeSeriesRef\SampleApp_RDotNet_VS2012.PIWSTimeSeriesRef.TimeSeriesUpdates.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\PIWSTimeSeriesRef\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PIWSTimeSeriesRef\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PIWSTimeSeriesRef\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PIWSTimeSeriesRef\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

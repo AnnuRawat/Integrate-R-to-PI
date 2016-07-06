@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/angular.js"></script>
+</head>
+<body ng-app="pirapp">
+    <div ng-controller="AppCtrl">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="image in plots">
+                            <div ng-bind-html="unsafe(image)"></div>
+                        </li>
+                    </ul>
+                    <div ng-if="waiting">Waiting...</div>
+                    <div class="panel-footer">
+                        <button class="btn btn-primary pull-right" ng-disabled="waiting" ng-click="executeCode()">Execute <i class="glyphicon glyphicon-play"></i></button>
+                        <button class="btn" ng-disabled="waiting" ng-click="clearCode()">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var pirapp = angular.module('pirapp', []);
+
+
+        pirapp.controller('AppCtrl', function ($scope, $sce, $http) {
+            $scope.clearCode = function () {
+                $scope.code.Block = '';
+                $scope.code.Errors = [];
+            }
+            $scope.code = {
+                Block: '',
+                Errors: []
+            };
+            $scope.executeCode = function () {
+                $scope.waiting = true;
+                $scope.code.Errors = [];
+                $http.post('/api/code/execute', $scope.code).then(function (response) {
+                    $scope.plots = response.data;
+
+                    $scope.waiting = false;
+                })
+            }
+
+            $scope.unsafe = function (s) {
+                return $sce.trustAsHtml(s);
+            }
+        });
+
+    </script>
+</body>
+
+</html>
+
+

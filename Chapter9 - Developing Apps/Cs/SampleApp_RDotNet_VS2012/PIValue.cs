@@ -11,19 +11,19 @@ namespace SampleApp_RDotNet_VS2012
         public string Status{ get; set; }
         public DateTime Timestamp{ get; set; }
         public string UnitOfMeasure{ get; set; }
-        public Object Value{ get; set; }
+        public double Value{ get; set; }
 
         public PIValue()
         { 
         
         }
-        public PIValue(Object myValue)
+        public PIValue(double myValue)
         {
             Value = myValue;
             Timestamp = DateTime.Now;
         }
 
-        public PIValue(Object myValue, DateTime timestamp)
+        public PIValue(double myValue, DateTime timestamp)
         {
             Value = myValue;
             Timestamp = timestamp;
