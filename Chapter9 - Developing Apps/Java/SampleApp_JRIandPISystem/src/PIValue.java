@@ -17,10 +17,10 @@ public class PIValue {
 
 	}
 	
-	public PIValue(Object Value, Object TimeStamp)
+	public PIValue(Object Value, Date TimeStamp)
 	{
 		iValue=(double)Value;
-		iTimeStamp = (Date)TimeStamp;
+		iTimeStamp = TimeStamp;
 	}
 	
 	public double GetValue()

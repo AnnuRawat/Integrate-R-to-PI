@@ -13,7 +13,6 @@ using System.Diagnostics;
 namespace SharedLib
 {
     public class RApplication
-
     {
 
         private REngine engine = null;
