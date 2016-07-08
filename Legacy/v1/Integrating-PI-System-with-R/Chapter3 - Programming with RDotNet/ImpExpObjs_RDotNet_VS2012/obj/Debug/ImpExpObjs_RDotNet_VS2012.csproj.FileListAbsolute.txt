@@ -1,0 +1,13 @@
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\ImpExpObjs_RDotNet_VS2012.exe.config
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\obj\Debug\ImpExpObjs_RDotNet_VS2012.csprojResolveAssemblyReference.cache
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\ImpExpObjs_RDotNet_VS2012.exe
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\ImpExpObjs_RDotNet_VS2012.pdb
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\RDotNet.dll
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\RDotNet.NativeLibrary.dll
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\RDotNet.xml
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\bin\Debug\RDotNet.NativeLibrary.xml
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\obj\Debug\ImpExpObjs_RDotNet_VS2012.exe
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\ImpExpObjs_RDotNet_VS2012\ImpExpObjs_RDotNet_VS2012\obj\Debug\ImpExpObjs_RDotNet_VS2012.pdb
+C:\GitHub\Integrating-PI-System-with-R\Chapter3 - Programming with RDotNet\ImpExpObjs_RDotNet_VS2012\bin\Debug\ImpExpObjs_RDotNet_VS2012.exe.config
+C:\GitHub\Integrating-PI-System-with-R\Chapter3 - Programming with RDotNet\ImpExpObjs_RDotNet_VS2012\obj\Debug\ImpExpObjs_RDotNet_VS2012.exe
+C:\GitHub\Integrating-PI-System-with-R\Chapter3 - Programming with RDotNet\ImpExpObjs_RDotNet_VS2012\obj\Debug\ImpExpObjs_RDotNet_VS2012.pdb
