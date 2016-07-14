@@ -1,0 +1,17 @@
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\SampleApp_RDotNet_VS2012.exe.config
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.Properties.Resources.resources
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.csproj.GenerateResource.Cache
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\SampleApp_RDotNet_VS2012.exe
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\SampleApp_RDotNet_VS2012.pdb
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\Newtonsoft.Json.dll
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\RDotNet.dll
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\RDotNet.NativeLibrary.dll
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\Newtonsoft.Json.xml
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\RDotNet.xml
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\RDotNet.NativeLibrary.xml
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.exe
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.pdb
+C:\Development Projects\RDotNET\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.WinForm.resources
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\bin\Debug\SampleApp_RDotNet_VS2012.exe.config
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.exe
+C:\Development Projects\RDotNET\WebinarAndWhitePaper\SampleApp_RDotNet_VS2012\SampleApp_RDotNet_VS2012\obj\Debug\SampleApp_RDotNet_VS2012.pdb
