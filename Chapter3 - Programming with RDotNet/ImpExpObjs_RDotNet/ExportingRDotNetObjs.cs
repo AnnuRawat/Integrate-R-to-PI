@@ -11,8 +11,7 @@ namespace ImpExpObjs_RDotNet_VS2012
     public class ExportingRDotNetObjs
     {
         public static void Start(REngine engine)
-        {
-            
+        {           
             
             Console.WriteLine("\n\nExporting Objects\n\n");
             string RCodeString = string.Empty;

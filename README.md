@@ -5,25 +5,25 @@ Integrating the PI System with R White Paper: Source Code Package
 This repository is organized by chapters from the Integrating the PI System with R White Paper. 
 
 ##Getting Started
-To be able to accomplish and implement the examples and methods proposed in this white paper, you need the following pieces:
 
-- PI Data Archive 2010 or higher
-- PI System Management Tools (SMT) 2010 or higher
-- PI SDK 2010 R2 or higher
-- PI AF SDK and PI System Explorer 2012 or higher
-- PI Web Services 2012 or higher
-- PI Web API Beta 1.1.0.148-pre (product not released yet).
-- PI JDBC 2012 or higher
-- PI ACE 2010 R2 or higher (optional)
-- R Statistical Computing (R console) 2.15.3 or higher
-- .NET Framework 4 or higher
-- Microsoft Visual Studio 2010 or higher (for .NET development)
-- R.NET 1.5.5 (package for .NET development)
-- Java 7 Update 55 (for Java development)
-- Eclipse IDE for Java Developers (for Java development)
-- JRI (package for Java development)
+The following pieces were used to implement the examples and methods proposed in this white paper:
+
+-PI Data Archive 2016 
+-PI System Management Tools (SMT) 2016
+-PI SDK 1.4.4
+-PI AF SDK and PI System Explorer 2016 
+-PI Web API 2016
+-PI JDBC 2016
+-PI ACE 2010 R2 
+-R Statistical Computing (R console) 3.3.1
+-Microsoft Visual Studio 2013/2015
+-R.NET 1.6.5 (package for .NET development)
+-Java 8 Update 91 
+-Eclipse Neon IDE for Java Developers
+-JRI (package for Java development)
 
 It is always recommended to use the most recent version of the products above.
+
 
 
 ##White Paper
