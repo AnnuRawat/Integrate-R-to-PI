@@ -31,7 +31,7 @@ namespace WindowsFormsApplication
         public WinForm()
         {
             InitializeComponent();
-            REngine _engine = REngine.GetInstance(null, true, null, null);
+            REngine _engine = REngine.GetInstance();
             _engine.Initialize();
             MyApp = new RApplication(_engine);
             tsPISDKVersion.Text = "PI AF SDK Version: " + MyApp.GetVersion();

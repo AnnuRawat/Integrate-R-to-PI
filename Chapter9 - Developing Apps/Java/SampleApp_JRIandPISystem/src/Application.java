@@ -295,9 +295,4 @@ public class Application {
 		PIValues values = piValuesList.get(n - 1);
 		return values.size();
 	}
-
-	private void Disconnect() {
-		piDevWrapper.Disconnect();
-	}
-
 }
