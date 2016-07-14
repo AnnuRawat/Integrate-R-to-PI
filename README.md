@@ -8,19 +8,19 @@ This repository is organized by chapters from the Integrating the PI System with
 
 The following pieces were used to implement the examples and methods proposed in this white paper:
 
--PI Data Archive 2016 
--PI System Management Tools (SMT) 2016
--PI SDK 1.4.4
--PI AF SDK and PI System Explorer 2016 
--PI Web API 2016
--PI JDBC 2016
--PI ACE 2010 R2 
--R Statistical Computing (R console) 3.3.1
--Microsoft Visual Studio 2013/2015
--R.NET 1.6.5 (package for .NET development)
--Java 8 Update 91 
--Eclipse Neon IDE for Java Developers
--JRI (package for Java development)
+- PI Data Archive 2016 
+- PI System Management Tools (SMT) 2016
+- PI SDK 1.4.4
+- PI AF SDK and PI System Explorer 2016 
+- PI Web API 2016
+- PI JDBC 2016
+- PI ACE 2010 R2 
+- R Statistical Computing (R console) 3.3.1
+- Microsoft Visual Studio 2013/2015
+- R.NET 1.6.5 (package for .NET development)
+- Java 8 Update 91 
+- Eclipse Neon IDE for Java Developers
+- JRI (package for Java development)
 
 It is always recommended to use the most recent version of the products above.
 
