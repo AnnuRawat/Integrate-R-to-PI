@@ -14,15 +14,14 @@ namespace ImpExpObjs_RDotNet_VS2012
             //Create R.NET instance
             REngine engine = REngine.GetInstance(null, true, null, null);
             engine.Initialize();
+
    
             Console.WriteLine("Is engine running? " + engine.IsRunning);
             Console.WriteLine("Engine ID: " + engine.ID);
             ExportingRDotNetObjs.Start(engine);
             ImportingRDotNetObjs.Start(engine);
-            
 
-            //Close R.NET connection
-            //engine.Close();
+            engine.Dispose();
 
             Console.WriteLine("\nFinished");
             Console.ReadKey();
